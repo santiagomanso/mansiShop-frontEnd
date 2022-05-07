@@ -11,7 +11,7 @@ import Message from '../components/Message'
 import { useNavigate } from 'react-router-dom'
 
 const ProductScreen = () => {
-  const [qty, setQty] = useState(0)
+  const [qty, setQty] = useState(1)
   const { id } = useParams()
   const dispatch = useDispatch()
   const productDetails = useSelector((state) => state.productDetails)
@@ -26,7 +26,6 @@ const ProductScreen = () => {
     navigate(`/cart/${id}?qty=${qty}`)
   }
 
-  console.log(product)
   // render nothing during the time product is loading
   if (!product) return null
   return (
