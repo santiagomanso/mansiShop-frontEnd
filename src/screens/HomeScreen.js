@@ -17,7 +17,7 @@ const HomeScreen = () => {
 
   return (
     <>
-      <h4>LATEST PRODUCTS</h4>
+      <h4 className='animate__animated animate__fadeInLeft'>LATEST PRODUCTS</h4>
       {loading ? (
         <Loader />
       ) : error ? (

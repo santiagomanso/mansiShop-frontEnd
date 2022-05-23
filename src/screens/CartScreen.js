@@ -47,10 +47,21 @@ const CartScreen = () => {
               <ListGroup.Item key={item.product}>
                 <Row>
                   <Col md={4}>
-                    <Image src={item.image} alt={item.name} fluid rounded />
+                    <Image
+                      src={item.image}
+                      alt={item.name}
+                      fluid
+                      rounded
+                      className='animate__animated animate__flipInX'
+                    />
                   </Col>
                   <Col md={2}>
-                    <Link to={`/product/${item.product}`}>{item.name}</Link>
+                    <Link
+                      className='animate__animated animate__jackInTheBox'
+                      to={`/product/${item.product}`}
+                    >
+                      {item.name}
+                    </Link>
                   </Col>
                   <Col md={2}>{item.price}</Col>
                   <Col md={2}>
@@ -77,7 +88,7 @@ const CartScreen = () => {
                         removeFromCartHandler(item.product)
                       }}
                     >
-                      <i className='fa fa-trash'></i>
+                      <i className='fa fa-trash animate__animated animate__zoomIn'></i>
                     </Button>
                   </Col>
                 </Row>
